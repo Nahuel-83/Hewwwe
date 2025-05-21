@@ -1,0 +1,70 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #00F0FF;
+  --color-primary-light: #4DFFFF;
+  --color-primary-dark: #00B8C4;
+  --color-secondary: #FF00F5;
+  --color-secondary-light: #FF4DFF;
+  --color-secondary-dark: #C400BC;
+
+  /* Base Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-background: #F5F5F5;
+  --color-surface: var(--color-white);
+  --color-surface-variant: #EEEEEE;
+  --color-surface-variant-dark: #DDDDDD;
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: rgba(0, 0, 0, 0.7);
+  --color-divider: rgba(0, 0, 0, 0.12);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Feedback Colors */
+  --color-error: #FF3B30;
+  --color-success: #34C759;
+  --color-warning: #FF9500;
+  --color-info: var(--color-primary);
+
+  /* Typography */
+  --font-headers: 'Domine', serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Layout */
+  --header-height: 64px;
+  --container-width: 1200px;
+  --table-width: 95%;
+  --form-width: 600px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Z-index */
+  --z-header: 100;
+  --z-modal: 1000;
+  --z-tooltip: 1500;
+}

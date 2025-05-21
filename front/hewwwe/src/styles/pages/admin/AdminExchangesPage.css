@@ -1,0 +1,34 @@
+.admin-products-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #888;
+  padding-top: 64px;
+  overflow: auto;
+}
+
+.admin-products-content {
+  padding: 24px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.admin-products-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-products-title {
+  color: white;
+  font-weight: bold;
+}
+
+.status-chip {
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}

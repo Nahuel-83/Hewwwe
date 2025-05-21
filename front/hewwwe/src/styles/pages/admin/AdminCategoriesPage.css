@@ -1,0 +1,26 @@
+.admin-categories-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #888;
+  padding-top: 64px;
+  overflow-y: auto;
+}
+
+.admin-categories-content {
+  padding: 24px;
+  width: 95%; /* Cambiado de max-width fijo a ancho porcentual */
+  margin: 0 auto;
+}
+
+.admin-categories-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-categories-title {
+  color: white;
+  font-weight: bold;
+}

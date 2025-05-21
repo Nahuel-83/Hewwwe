@@ -1,0 +1,50 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: hewwwe
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - hewwwe-network
+
+  backend:
+    build:
+      context: ./back/Hewwwe
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - hewwwe-network
+    
+  frontend:
+    build:
+      context: ./front/hewwwe
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+    networks:
+      - hewwwe-network
+
+networks:
+  hewwwe-network:
+    driver: bridge
+
+
+volumes:
+  mysql-data:
+    driver: local

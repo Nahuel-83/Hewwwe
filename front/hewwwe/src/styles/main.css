@@ -1,0 +1,252 @@
+/* 
+ * Hewwwe - Main CSS File
+ * This file imports all component styles in the correct order
+ */
+
+/* Import base styles */
+@import './variables.css';
+@import './global.css';
+@import './animations.css';
+@import './dark-theme.css';
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/* Layout */
+@import './layout/Layout.css';
+
+/* Component styles */
+@import './components/Button.css';
+@import './components/Navbar.css';
+@import './components/Form.css';
+@import './components/Table.css';
+@import './components/Dropdown.css';
+@import './components/Card.css';
+@import './components/Navigation.css';
+
+/* Product components */
+@import './components/Products.css';
+@import './components/ProductCard.css';
+@import './components/ProductDetail.css';
+
+/* Page-specific styles */
+@import './pages/products/ProductList.css';
+@import './pages/auth/Login.css';
+@import './pages/auth/Register.css';
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    font-size: 12pt;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .card, 
+  .container, 
+  .section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+:root {
+  /* Color Palette */
+  --color-white: #ffffff;
+  --color-light-gray: #edede9;
+  --color-greenish-gray: #f2f4f3;
+  
+  /* Derived Colors */
+  --color-primary: #4a4e4a;
+  --color-primary-light: #6c7069;
+  --color-primary-dark: #363a36;
+  --color-secondary: #7d7e75;
+  --color-secondary-light: #9fa196;
+  --color-secondary-dark: #606158;
+  
+  /* Feedback Colors */
+  --color-error: #db5461;
+  --color-success: #70a37f;
+  --color-warning: #e6b655;
+  --color-info: #6e9ece;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  
+  /* Typography */
+  --font-headers: 'Domine', serif;
+  --font-body: 'Nunito', sans-serif;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;  /* 4px */
+  --border-radius-md: 0.5rem;   /* 8px */
+  --border-radius-lg: 1rem;     /* 16px */
+  --border-radius-full: 9999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-color: var(--color-light-gray);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headers);
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.font-heading { font-family: var(--font-headers); }
+.font-body { font-family: var(--font-body); }
+
+.weight-light { font-weight: 300; }
+.weight-regular { font-weight: 400; }
+.weight-medium { font-weight: 500; }
+.weight-semibold { font-weight: 600; }
+.weight-bold { font-weight: 700; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--space-xs); }
+.mt-2 { margin-top: var(--space-sm); }
+.mt-3 { margin-top: var(--space-md); }
+.mt-4 { margin-top: var(--space-lg); }
+.mt-5 { margin-top: var(--space-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--space-xs); }
+.mb-2 { margin-bottom: var(--space-sm); }
+.mb-3 { margin-bottom: var(--space-md); }
+.mb-4 { margin-bottom: var(--space-lg); }
+.mb-5 { margin-bottom: var(--space-xl); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--space-xs); }
+.p-2 { padding: var(--space-sm); }
+.p-3 { padding: var(--space-md); }
+.p-4 { padding: var(--space-lg); }
+.p-5 { padding: var(--space-xl); }
+
+.rounded-sm { border-radius: var(--border-radius-sm); }
+.rounded-md { border-radius: var(--border-radius-md); }
+.rounded-lg { border-radius: var(--border-radius-lg); }
+.rounded-full { border-radius: var(--border-radius-full); }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Status indicators */
+.status-active {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.status-pending {
+  background-color: var(--color-warning);
+  color: var(--color-white);
+}
+
+.status-inactive {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+/* Loading Animation */
+.loading-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.25rem solid rgba(74, 78, 74, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

@@ -1,0 +1,207 @@
+.product-form-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #edede9;
+  padding-top: 64px;
+  overflow-y: auto;
+}
+
+.product-form-content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
+}
+
+.product-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.product-form-title {
+  font-weight: 800;
+  color: #2f2f2f;
+}
+
+.product-form-paper {
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.form-cancel-button,
+.form-submit-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-cancel-button {
+  background-color: transparent;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+}
+
+.form-cancel-button:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.form-submit-button {
+  background-color: #1976d2;
+  border: 1px solid #1976d2;
+  color: white;
+}
+
+.form-submit-button:hover {
+  background-color: #1565c0;
+}
+
+.form-cancel-button:disabled,
+.form-submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Make MUI inputs match the ProductsPage aesthetic */
+.MuiFormControl-root {
+  margin-bottom: 16px !important;
+}
+
+.MuiInputBase-root {
+  background-color: #fff;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #2f2f2f;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2f2f2f;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #2f2f2f;
+}
+
+/* Image upload component */
+.image-upload-container {
+  margin: 20px 0;
+}
+
+.image-upload-item {
+  margin-bottom: 10px;
+}
+
+.file-input-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.upload-button {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+  border-color: #2f2f2f;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.upload-button svg {
+  color: #777;
+  font-size: 32px;
+}
+
+.upload-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+.image-preview-wrapper {
+  margin: 0 10px 10px 0;
+}
+
+.image-preview-item {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image-button {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  padding: 2px !important;
+  margin: 2px !important;
+}
+
+.remove-image-button:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+} 

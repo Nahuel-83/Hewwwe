@@ -1,0 +1,29 @@
+.mui-card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-quick);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mui-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-media {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  flex-grow: 1;
+  padding: var(--space-md);
+}
+
+.card-actions {
+  padding: var(--space-md);
+  padding-top: 0;
+}

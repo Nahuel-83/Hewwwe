@@ -1,0 +1,248 @@
+/* Product List Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+.products-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #edede9;
+  padding-bottom: var(--space-xl);
+}
+
+.products-header {
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.products-header h1 {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #363a36;
+  margin: 0;
+  padding-bottom: var(--space-sm);
+  position: relative;
+  display: inline-block;
+}
+
+.products-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #4a4e4a;
+  border-radius: 999px;
+}
+
+/* Products Grid */
+.products-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-family: 'Domine', serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #363a36;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  color: #606158;
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-family: 'Domine', serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #4a4e4a;
+  margin: 0 0 1rem 0;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.product-availability {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: #70a37f;
+  color: #ffffff;
+}
+
+.add-to-cart-btn {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a4e4a;
+  background-color: #f2f4f3;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #edede9;
+  transform: translateY(-2px);
+}
+
+.add-to-cart-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Navigation Styles */
+.product-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.product-nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.product-nav-link {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: #4a4e4a;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.product-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4a4e4a;
+  border-radius: 999px;
+}
+
+.product-nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .products-container {
+    padding: var(--space-lg);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: var(--space-md);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-sm);
+  }
+  
+  .product-details {
+    padding: 0.75rem;
+  }
+  
+  .product-footer {
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: var(--space-sm);
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-image-container {
+    height: 180px;
+  }
+} 

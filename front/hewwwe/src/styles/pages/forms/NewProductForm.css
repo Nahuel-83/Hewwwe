@@ -1,0 +1,261 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+.new-product-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #edede9;
+  padding-top: 64px;
+  overflow-y: auto;
+}
+
+.new-product-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
+}
+
+.new-product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-weight: 800;
+  color: #2f2f2f;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Domine', serif;
+}
+
+.product-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-family: 'Nunito', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2f2f2f;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: all 0.2s ease;
+  color: #000000;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #fff;
+  color: #000000;
+}
+
+.price-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.price-input-container input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.price-symbol {
+  position: absolute;
+  right: 1.2rem;
+  color: #666;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+
+.image-preview {
+  width: 100%;
+  margin-top: 1.2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+  flex-grow: 1;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+/* File input styling */
+input[type="file"] {
+  padding: 0.8rem;
+  background-color: #f8f8f8;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+/* Select element option styling */
+select option {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .new-product-container {
+    padding-top: 32px;
+  }
+  
+  .new-product-content {
+    padding: 16px;
+  }
+  
+  .product-form {
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    padding: 0.9rem;
+  }
+} 

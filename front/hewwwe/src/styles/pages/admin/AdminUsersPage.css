@@ -1,0 +1,159 @@
+@import '../admin/admin-common.css';
+
+.admin-users-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #888;
+  padding-top: 64px;
+  overflow: auto;
+}
+
+.admin-users-content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-users-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-users-title {
+  color: white;
+  font-weight: bold;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.user-email {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.user-role {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-admin {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.role-user {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.user-form-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-md);
+}
+
+.user-form-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.user-stat-card {
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.user-stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.user-stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .user-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user-form-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-stat-value {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.admin-products-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #888;
+  padding-top: 64px;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+.admin-products-content {
+  padding: 24px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.admin-products-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-products-title {
+  color: white;
+  font-weight: bold;
+}

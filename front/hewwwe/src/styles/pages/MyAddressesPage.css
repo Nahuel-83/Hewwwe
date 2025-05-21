@@ -1,0 +1,119 @@
+/* Estilos para MyAddressesPage */
+
+.my-addresses-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #edede9;
+  padding-top: 64px;
+  overflow-y: auto;
+}
+
+.my-addresses-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px;
+}
+
+.my-addresses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.my-addresses-title {
+  font-weight: 800;
+  color: #2f2f2f;
+}
+
+.my-addresses-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.address-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 24px;
+}
+
+.address-card:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.address-content {
+  flex-grow: 1;
+}
+
+.address-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2f2f2f;
+  margin-bottom: 12px;
+}
+
+.address-detail {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.address-detail-label {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.address-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.add-address-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+.default-address-badge {
+  display: inline-block;
+  background-color: #2f2f2f;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* Estados responsive */
+@media (max-width: 600px) {
+  .my-addresses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .my-addresses-content {
+    padding: 16px;
+  }
+  
+  .my-addresses-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+  .my-addresses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

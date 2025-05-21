@@ -1,0 +1,28 @@
+.admin-invoices-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #888;
+  padding-top: 64px;
+  overflow: auto;
+}
+
+.admin-invoices-content {
+  padding: 24px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.admin-invoices-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-invoices-title {
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,184 @@
+/* Dark Theme Variables */
+[data-theme="dark"],
+:root.dark-mode {
+  /* Color Palette - Dark Mode */
+  --color-white: #ffffff;
+  --color-light-gray: #edede9;
+  --color-greenish-gray: #f2f4f3;
+  
+  /* Derived Colors */
+  --color-primary: #6c7b6c;
+  --color-primary-light: #8a9a8a;
+  --color-primary-dark: #4e5b4e;
+  --color-secondary: #8d8e87;
+  --color-secondary-light: #a8a9a2;
+  --color-secondary-dark: #6e6f69;
+
+  /* Base Colors - Dark Mode */
+  --color-black: #121212;
+  --color-background: #1e1e1e;
+  --color-surface: #262626;
+  --color-surface-variant: #323232;
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #b0b0b0;
+  --color-text-tertiary: #8c8c8c;
+  --color-divider: rgba(255, 255, 255, 0.12);
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-overlay-light: rgba(255, 255, 255, 0.05);
+
+  /* Feedback Colors - Dark Mode */
+  --color-error: #e57373;
+  --color-error-light: rgba(229, 115, 115, 0.2);
+  --color-success: #81c784;
+  --color-success-light: rgba(129, 199, 132, 0.2);
+  --color-warning: #ffb74d;
+  --color-warning-light: rgba(255, 183, 77, 0.2);
+  --color-info: #64b5f6;
+  --color-info-light: rgba(100, 181, 246, 0.2);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Theme - Media Query Detection */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-mode) {
+    /* Color Palette - Dark Mode */
+    --color-white: #ffffff;
+    --color-light-gray: #edede9;
+    --color-greenish-gray: #f2f4f3;
+    
+    /* Derived Colors */
+    --color-primary: #6c7b6c;
+    --color-primary-light: #8a9a8a;
+    --color-primary-dark: #4e5b4e;
+    --color-secondary: #8d8e87;
+    --color-secondary-light: #a8a9a2;
+    --color-secondary-dark: #6e6f69;
+  
+    /* Base Colors - Dark Mode */
+    --color-black: #121212;
+    --color-background: #1e1e1e;
+    --color-surface: #262626;
+    --color-surface-variant: #323232;
+    --color-text-primary: #f0f0f0;
+    --color-text-secondary: #b0b0b0;
+    --color-text-tertiary: #8c8c8c;
+    --color-divider: rgba(255, 255, 255, 0.12);
+    --color-overlay: rgba(0, 0, 0, 0.6);
+    --color-overlay-light: rgba(255, 255, 255, 0.05);
+  
+    /* Feedback Colors - Dark Mode */
+    --color-error: #e57373;
+    --color-error-light: rgba(229, 115, 115, 0.2);
+    --color-success: #81c784;
+    --color-success-light: rgba(129, 199, 132, 0.2);
+    --color-warning: #ffb74d;
+    --color-warning-light: rgba(255, 183, 77, 0.2);
+    --color-info: #64b5f6;
+    --color-info-light: rgba(100, 181, 246, 0.2);
+  
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3);
+    --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Dark Theme Specific Styles */
+[data-theme="dark"] .card,
+:root.dark-mode .card,
+:root:not(.light-mode) .card {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .navbar,
+:root.dark-mode .navbar,
+:root:not(.light-mode) .navbar {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .btn-outline,
+:root.dark-mode .btn-outline,
+:root:not(.light-mode) .btn-outline {
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .btn-outline:hover,
+:root.dark-mode .btn-outline:hover,
+:root:not(.light-mode) .btn-outline:hover {
+  background-color: var(--color-overlay-light);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-light);
+}
+
+/* Dark Theme Form Elements */
+[data-theme="dark"] .form-control,
+:root.dark-mode .form-control,
+:root:not(.light-mode) .form-control {
+  background-color: var(--color-surface);
+  border-color: var(--color-divider);
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+:root.dark-mode .form-control:focus,
+:root:not(.light-mode) .form-control:focus {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px rgba(108, 123, 108, 0.3);
+}
+
+/* Dark Theme Table */
+[data-theme="dark"] .table thead,
+:root.dark-mode .table thead,
+:root:not(.light-mode) .table thead {
+  background-color: var(--color-surface-variant);
+}
+
+[data-theme="dark"] .table tbody tr:hover,
+:root.dark-mode .table tbody tr:hover,
+:root:not(.light-mode) .table tbody tr:hover {
+  background-color: var(--color-overlay-light);
+}
+
+/* Selection Color */
+[data-theme="dark"] ::selection,
+:root.dark-mode ::selection,
+:root:not(.light-mode) ::selection {
+  background-color: rgba(108, 123, 108, 0.5);
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar Styling */
+[data-theme="dark"] ::-webkit-scrollbar-track,
+:root.dark-mode ::-webkit-scrollbar-track,
+:root:not(.light-mode) ::-webkit-scrollbar-track {
+  background: var(--color-surface-variant);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb,
+:root.dark-mode ::-webkit-scrollbar-thumb,
+:root:not(.light-mode) ::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-dark);
+  border-radius: var(--border-radius-full);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+:root.dark-mode ::-webkit-scrollbar-thumb:hover,
+:root:not(.light-mode) ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-light);
+}
+
+/* Theme Transition */
+.theme-transition {
+  transition: all 0.3s ease;
+} 
