@@ -255,7 +255,7 @@ We welcome contributions to improve Hewwwe! Please follow these steps:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 📞 Contact & Support
-For support, feature requests, or inquiries, please contact [nahueldevesa@gmail.com].
+For support, feature requests, or inquiries, please contact [nahueldevesagil@gmail.com].
 
 ---
 
